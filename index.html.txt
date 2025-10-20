@@ -1,0 +1,484 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Link Travels - Connecting Dreams to Destinations ✈️</title>
+    <!-- Bootstrap CSS for responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --dark-blue: #001f3f; /* Dark Blue for trust and travel */
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--dark-blue);
+        }
+        .navbar {
+            background-color: var(--dark-blue);
+        }
+        .navbar-brand {
+            color: var(--white) !important;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: var(--white) !important;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('https://source.unsplash.com/random/1920x1080/?airplane') center/cover;
+            color: var(--white);
+            padding: 150px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        .btn-primary {
+            background-color: var(--dark-blue);
+            border-color: var(--dark-blue);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .highlight-card {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            background: var(--light-gray);
+        }
+        .highlight-card:hover {
+            transform: translateY(-10px);
+        }
+        .highlight-card i {
+            font-size: 3rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+        .service-card, .destination-card {
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover, .destination-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card img, .destination-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .testimonial {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+        .logo {
+            color: var(--dark-blue);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .plane-icon {
+            color: var(--dark-blue);
+            margin-right: 10px;
+        }
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Simple plane animation */
+        .plane-anim {
+            position: absolute;
+            top: 20%;
+            right: -50px;
+            font-size: 2rem;
+            animation: fly 10s linear infinite;
+        }
+        @keyframes fly {
+            0% { right: -50px; }
+            100% { right: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Fly Link Travels Logo"> Fly Link Travels</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Home Page -->
+<section id="home" class="hero">
+    <div class="container">
+        <i class="fas fa-plane plane-anim" style="animation-delay: 2s;">✈️</i>
+        <h1>Connecting Dreams to Destinations ✈️</h1>
+        <p>Your trusted partner for affordable travel from Lisbon to the world</p>
+        <a href="#booking-form" class="btn btn-primary btn-lg">Book Now</a>
+        <div class="mt-4">
+            <a href="https://wa.me/351920745722" class="btn btn-success me-2"><i class="fab fa-whatsapp"></i> WhatsApp +351</a>
+            <a href="https://wa.me/48729424889" class="btn btn-success me-2"><i class="fab fa-whatsapp"></i> WhatsApp +48</a>
+            <a href="mailto:acdipak@gmail.com" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Highlights Section -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Cheap Air Tickets</h3>
+                    <p>Book flights worldwide at unbeatable prices.</p>
+                    <a href="#booking-form" class="btn btn-primary">Book Your Flight Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotel & Hostel Booking</h3>
+                    <p>From budget hostels to luxury hotels.</p>
+                    <a href="#services" class="btn btn-primary">Find Cheap Deals</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card">
+                    <i class="fas fa-passport"></i>
+                    <h3>Visa Consultation</h3>
+                    <p>Expert guidance for Europe travel from South Asia.</p>
+                    <a href="#services" class="btn btn-primary">Get Visa Help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Us -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://source.unsplash.com/random/600x400/?lisbon" alt="Lisbon" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>About Fly Link Travels</h2>
+                <p>Established in the heart of Lisbon, Fly Link Travels is your gateway to seamless travel experiences. We specialize in connecting South Asian travelers from Nepal, India, Bangladesh, Pakistan, and Sri Lanka to the wonders of Europe and beyond.</p>
+                <p><strong>Our Mission:</strong> To make travel affordable, reliable, and hassle-free for everyone dreaming of new horizons.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services -->
+<section id="services" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="https://source.unsplash.com/random/400x200/?airplane" alt="Flights">
+                    <div class="card-body">
+                        <h5 class="card-title">Cheap Air Tickets</h5>
+                        <p class="card-text">Global flight booking assistance with the lowest fares. Tailored for your journey.</p>
+                        <a href="#booking-form" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="https://source.unsplash.com/random/400x200/?hotel" alt="Hotels">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel & Hostel Booking</h5>
+                        <p class="card-text">Secure budget to luxury accommodations worldwide.</p>
+                        <a href="#" class="btn btn-primary">Explore Stays</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card">
+                    <img src="https://source.unsplash.com/random/400x200/?visa" alt="Visa">
+                    <div class="card-body">
+                        <h5 class="card-title">Tourist Visa Consultation</h5>
+                        <p class="card-text">Personalized advice for Schengen visas and Europe travel from South Asia.</p>
+                        <a href="#contact" class="btn btn-primary">Consult Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Destinations -->
+<section id="destinations" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Destinations</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?portugal" alt="Portugal">
+                    <div class="card-body text-center">
+                        <h5>Portugal</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?france" alt="France">
+                    <div class="card-body text-center">
+                        <h5>France</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?italy" alt="Italy">
+                    <div class="card-body text-center">
+                        <h5>Italy</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?spain" alt="Spain">
+                    <div class="card-body text-center">
+                        <h5>Spain</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?germany" alt="Germany">
+                    <div class="card-body text-center">
+                        <h5>Germany</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?dubai" alt="Dubai">
+                    <div class="card-body text-center">
+                        <h5>Dubai</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card destination-card">
+                    <img src="https://source.unsplash.com/random/300x200/?thailand" alt="Thailand">
+                    <div class="card-body text-center">
+                        <h5>Thailand</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials -->
+<section id="testimonials" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Fly Link made my dream trip to Paris affordable and stress-free. Highly recommend!"</p>
+                    <cite>- Raj from India</cite>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Excellent visa support for my family. We got approved in no time!"</p>
+                    <cite>- Priya from Nepal</cite>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial">
+                    <p>"Budget hotel in Lisbon was perfect. Great service overall."</p>
+                    <cite>- Ahmed from Bangladesh</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact & Booking Form -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Us & Book Your Trip</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:acdipak@gmail.com">acdipak@gmail.com</a></p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/351920745722">+351 920 745 722</a></p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/48729424889">+48 729 424 889</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="#">Facebook</a></p>
+                    <p><i class="fab fa-instagram"></i> <a href="#">Instagram</a></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form" id="booking-form">
+                    <h4>Passenger Booking Form</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="outboundDate" class="form-label">Outbound Date</label>
+                            <input type="date" class="form-control" id="outboundDate" min="2025-10-19" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="returnDate" class="form-label">Return Date (Optional for One-Way)</label>
+                            <input type="date" class="form-control" id="returnDate" min="2025-10-19">
+                        </div>
+                        <div class="mb-3">
+                            <label for="tripType" class="form-label">Trip Type</label>
+                            <select class="form-select" id="tripType" required>
+                                <option value="">Select...</option>
+                                <option value="oneway">One Way</option>
+                                <option value="roundtrip">Round Trip</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="handLuggage" class="form-label">Hand Luggage</label>
+                            <select class="form-select" id="handLuggage" required>
+                                <option value="">Select...</option>
+                                <option value="7kg">7kg</option>
+                                <option value="10kg">10kg</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="checkedLuggage" class="form-label">Checked Luggage</label>
+                            <select class="form-select" id="checkedLuggage" required>
+                                <option value="">Select...</option>
+                                <option value="20kg">20kg</option>
+                                <option value="25kg">25kg</option>
+                                <option value="30kg">30kg</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="departureCity" class="form-label">Departure City</label>
+                            <input type="text" class="form-control" id="departureCity" placeholder="e.g., Kathmandu" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="destinationCity" class="form-label">Destination City</label>
+                            <input type="text" class="form-control" id="destinationCity" placeholder="e.g., Lisbon" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Booking Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="logo"><img src="logo.png" alt="Fly Link Travels Logo" style="height: 30px; vertical-align: middle;"> Fly Link Travels</p>
+                <p>Connecting Dreams to Destinations ✈️</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#home" class="text-white me-3">Home</a>
+                <a href="#about" class="text-white me-3">About</a>
+                <a href="#services" class="text-white me-3">Services</a>
+                <a href="#contact" class="text-white">Contact</a>
+                <div class="mt-2">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/351920745722" class="text-white me-2"><i class="fab fa-whatsapp"></i> +351</a>
+                    <a href="https://wa.me/48729424889" class="text-white"><i class="fab fa-whatsapp"></i> +48</a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <p class="text-center">&copy; 2025 Fly Link Travels. All rights reserved. Based in Lisbon, Portugal.</p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Form Submission (Simple alert for demo) -->
+<script>
+    document.querySelector('#booking-form form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you! Your booking request has been submitted. We\'ll contact you soon via email or WhatsApp.');
+        this.reset();
+    });
+
+
+    // Set min date for return date based on outbound
+    document.getElementById('outboundDate').addEventListener('change', function() {
+        const returnDate = document.getElementById('returnDate');
+        returnDate.min = this.value;
+    });
+</script>
+
+
+</body>
+</html>
+```
